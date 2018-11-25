@@ -136,7 +136,7 @@ ffmpeg -i MyInputFile.mp3 -af "highpass=f=150, lowpass=f=10000, loudnorm=lra=6.0
 Tutorials are available elsewhere on using Audacity to achieve similar results.
 
 
-For mods adding a single voice, I suggest (for your sanity) a naming scheme like:
+For mods adding a single voice, I suggest (for your sanity) a naming scheme for your final sound files like:
 
 ```
 $ModSafeName$_Snd_Dashing_1.wav
