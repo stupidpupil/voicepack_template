@@ -1,6 +1,6 @@
 ﻿# $ModSafeName$ - How to edit this mod
 
-This mod template is setup to make it easy to create a voicepack for a single new voice using RoboJumper's voice script.
+This mod template is setup to make it easy to create a voicepack for a single new voice using Robojumper's voice script.
 
 As part of this, it uses specific naming conventions for different parts of the mod - when the instructions tell you to name something in a particular way, generally you must follow them exactly or else the mod will not work. (Quotation marks are NOT part of names.)
 
@@ -8,7 +8,7 @@ This document tries to be very thorough - it's quite wordy in the process. There
 
 This document has the following sections
  - Setting up the package (creating a barebones UPK file to start adding SoundCues and sound files to)
- - Adding your first bark (adding a sound file to the package and hooking it up RoboJumper's script via a sound cue)
+ - Adding your first bark (adding a sound file to the package and hooking it up Robojumper's script via a sound cue)
  - Notes on sound files (what formats are required, etc.)
  - Changing details (gender restrictions, voice name)
  - Credits
@@ -35,8 +35,8 @@ You MUST name the package "$ModSafeName$Pkg".
 3. Uncheck 
     "Use 'Actor' as Parent" and 
     "Placeable Classes Only"
-4. Search for "RoboJumperCharacterVoice_$ModSafeName$"
-5. Right-click on RoboJumperCharacterVoice_$ModSafeName$ and choose "Create Archetype..."
+4. Search for "RobojumperCharacterVoice_$ModSafeName$"
+5. Right-click on RobojumperCharacterVoice_$ModSafeName$ and choose "Create Archetype..."
 
 6. Set the Package name to "$ModSafeName$Pkg"
 7. Set the Name to "_$ModSafeName$VoiceArchetype"
@@ -150,7 +150,7 @@ To change the gender restrictions, language hints and to enable Spark and WotC c
 
 # Credits
 
-RoboJumper, for the voice script.
+Robojumper, for the voice script.
 
 ## How to create a voice pack
 https://docs.google.com/document/d/1asHlhTP9tJzyKXIwDALpWdJTVasjh-72blST9kQeai8

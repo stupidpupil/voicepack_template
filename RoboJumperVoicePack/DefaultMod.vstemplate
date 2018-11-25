@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>RoboJumperVoicePack</Name>
-    <Description>A template to guide people through creating a voice pack using RoboJumper's script.</Description>
+    <Name>RobojumperVoicePack</Name>
+    <Description>A template to guide people through creating a voice pack using Robojumper's script. Vanilla and WotC-compatible.</Description>
     <Icon>DefaultMod.ico</Icon>
     <ProjectType>XCOM2Mod</ProjectType>
     <SortOrder>1000</SortOrder>
     <TemplateID>24d0918b-c91f-4b01-af5d-8526d4ef53aa</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>My RoboJumperVoicePack Mod</DefaultName>
+    <DefaultName>My RobojumperVoicePack Mod</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
   </TemplateData>
   <TemplateContent>
@@ -23,7 +23,7 @@
 
       <ProjectItem ReplaceParameters="true">Localization\XComGame.int</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Src\$ModSafeName$\Classes\X2DownloadableContentInfo_$ModSafeName$.uc">X2DownloadableContentInfo_Mod.uc</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="Src\$ModSafeName$\Classes\RoboJumperCharacterVoice_$ModSafeName$.uc">RoboJumperCharacterVoice_Mod.uc</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Src\$ModSafeName$\Classes\RobojumperCharacterVoice_$ModSafeName$.uc">RobojumperCharacterVoice_Mod.uc</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>

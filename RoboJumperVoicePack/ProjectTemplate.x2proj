@@ -24,7 +24,7 @@
     <Content Include="Content\NamingInfo.txt"/>
     <Content Include="Localization\XComGame.int"/>
     <Content Include="Src\$ModSafeName$\Classes\X2DownloadableContentInfo_$ModSafeName$.uc" />
-    <Content Include="Src\$ModSafeName$\Classes\RoboJumperCharacterVoice_$ModSafeName$.uc" />
+    <Content Include="Src\$ModSafeName$\Classes\RobojumperCharacterVoice_$ModSafeName$.uc" />
 
   </ItemGroup>  
   <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets"/>

@@ -5,7 +5,7 @@ Package filename should be:
 \Content\$ModSafeName$Pkg.upk
 
 Archetype within UPK file MUST be based on:
-RoboJumperCharacterVoice_$ModSafeName$
+RobojumperCharacterVoice_$ModSafeName$
 
 and the Archetype object MUST be called: 
 _$ModSafeName$VoiceArchetype

@@ -1,13 +1,13 @@
 //---------------------------------------------------------------------------------------
-//  FILE:   RoboJumperCharacterVoice_$ModSafeName$.uc                                    
+//  FILE:   RobojumperCharacterVoice_$ModSafeName$.uc                                    
 //  
 //  Based on a version from https://pastebin.com/dpmkwX0Y on 25th November 2018
-//  Almost entirely by RoboJumper (https://github.com/robojumper)
+//  Almost entirely by Robojumper (https://github.com/robojumper)
 //  
 //---------------------------------------------------------------------------------------
 
 
-class RoboJumperCharacterVoice_$ModSafeName$ extends XComCharacterVoice;
+class RobojumperCharacterVoice_$ModSafeName$ extends XComCharacterVoice;
 
 struct SoundCueMap
 {
