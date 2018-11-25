@@ -93,7 +93,7 @@ You can select multiple SoundNodeWaves, and the Random node will pick between th
 
 ## Hook the cue up to the Voice
 1. In the package contents pane, right-click on the Archetype object (_$ModSafeName$VoiceArchetype) and choose Properties
-2. Expand the 'Robo Jumper Character Voice [...]' panel
+2. Expand the 'Robojumper Character Voice [...]' panel
 3. Expand the 'Events' list
 4. Find the event with the EventName "Dashing" ([19] as of writing)
 5. Expand this event
