@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>RoboJumperVoicePack</Name>
+    <Description>A template to guide people through creating a voice pack using RoboJumper's script.</Description>
+    <Icon>DefaultMod.ico</Icon>
+    <ProjectType>XCOM2Mod</ProjectType>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>24d0918b-c91f-4b01-af5d-8526d4ef53aa</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>My RoboJumperVoicePack Mod</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.x2proj" ReplaceParameters="true">
+      <ProjectItem>ModPreview.jpg</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">Instructions.txt</ProjectItem>      
+      <ProjectItem ReplaceParameters="true">Config\XComEditor.ini</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Config\XComEngine.ini</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Config\XComGame.ini</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Config\XComContent.ini</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Content\NamingInfo.txt</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true">Localization\XComGame.int</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Src\$ModSafeName$\Classes\X2DownloadableContentInfo_$ModSafeName$.uc">X2DownloadableContentInfo_Mod.uc</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Src\$ModSafeName$\Classes\RoboJumperCharacterVoice_$ModSafeName$.uc">RoboJumperCharacterVoice_Mod.uc</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>XCOM2.Wizards</Assembly>
+    <FullClassName>Firaxis.VisualStudio.Wizards.XCOM2.DefaultModWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

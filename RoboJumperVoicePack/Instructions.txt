@@ -1,0 +1,165 @@
+﻿# $ModSafeName$ - How to edit this mod
+
+This mod template is setup to make it easy to create a voicepack for a single new voice using RoboJumper's voice script.
+
+As part of this, it uses specific naming conventions for different parts of the mod - when the instructions tell you to name something in a particular way, generally you must follow them exactly or else the mod will not work. (Quotation marks are NOT part of names.)
+
+This document tries to be very thorough - it's quite wordy in the process. There are some other tutorials given in the Credits section which you might find helpful although they are not as specific to this template. 
+
+This document has the following sections
+ - Setting up the package (creating a barebones UPK file to start adding SoundCues and sound files to)
+ - Adding your first bark (adding a sound file to the package and hooking it up RoboJumper's script via a sound cue)
+ - Notes on sound files (what formats are required, etc.)
+ - Changing details (gender restrictions, voice name)
+ - Credits
+
+# Setting up the package
+In XCOM ModBuddy.
+
+1. Menus > BUILD > Build Solution
+2. Menus > TOOLS > XCOM 2 Editor
+
+This will open up the Unreal Editor for XCOM2
+
+## Create new UPK package
+1. In the Content Browser window, press the "New" button
+2. Set the Package name to "$ModSafeName$Pkg"
+3. Set the Factory to "SoundCue"
+4. Click "OK"
+
+You MUST name the package "$ModSafeName$Pkg".
+
+## Add a reference to the Robojumper Voice Character script
+1. Close the Unreal SoundCue Editor window
+2. In the Content Browser window select the Actor Classes tab
+3. Uncheck 
+    "Use 'Actor' as Parent" and 
+    "Placeable Classes Only"
+4. Search for "RoboJumperCharacterVoice_$ModSafeName$"
+5. Right-click on RoboJumperCharacterVoice_$ModSafeName$ and choose "Create Archetype..."
+
+6. Set the Package name to "$ModSafeName$Pkg"
+7. Set the Name to "_$ModSafeName$VoiceArchetype"
+8. Click "OK"
+
+You MUST name this object "_$ModSafeName$VoiceArchetype".
+
+## Save the package
+1. Go back to the "Content Browser" tab
+2. Right-click on SoundCue_0 and choose Delete
+3. Press Ctrl-S
+4. Click "Yes" in the warning Message that appears about references to external packages
+5. Navigate to your mod's content folder
+6. Save the package with its default name
+
+(e.g. %USERPROFILE%\Documents\Firaxis ModBuddy\XCOM\$ModSafeName$\$ModSafeName$\Content\$ModSafeName$Pkg.upk - this might not be quite right depending on what you've named stuff when you first created the mod.)
+
+## Add the package to your mod project
+1. Close the Content Browser and Unreal Editor windows
+2. Return to XCOM ModBuddy
+3. In the Solution Explorer pane on the left, right-click the Content folder and choose Add > Existing Item ...
+4. Navigate to and Add the "$ModSafeName$Pkg.upk" file
+
+# Adding your first bark
+
+This sections goes through the process of adding a 'Dashing' bark. This the bark played when previewing a voice in the character customisation screen.
+
+You may want to review the "Notes on sound files" section before proceeding.
+
+## Reopen the package
+1. Menus > TOOLS > XCOM 2 Editor
+2. In the Content Browser window, press the  button with an open folder icon
+3. Navigate to and open the "$ModSafeName$Pkg.upk" file
+
+## Importing a sound file
+1. In the Content Browser window, press the "Import" button
+2. Open your first sound file
+3. Leave the default options and click "OK"
+
+## Creating a sound cue
+1. Right-click in the background of the package contents pane and choose "New SoundCue"
+2. Set the name to "$ModSafeName$_Cue_Dashing" 
+
+You don't have to use this naming convention for SoundCues, but I strongly suggest you do so.
+
+3. In the package contents pane, select the SoundNodeWave you added earlier
+4. In the Unreal SoundCue Editor, right-click and choose "Random: [...]"
+5. Click-and-drag from the black connection point on the right-hand-side of the speaker to the connection point on the left-hand-side of the "Random" node.
+6. Close the Unreal SoundCue Editor window.
+
+You can select multiple SoundNodeWaves, and the Random node will pick between them when the cue is triggered.
+
+7. In the package contents pane, right-click on the MGSVRussianDemoVoice_Cue_Dashing object and choose "Sound Classes [...]" > "Voice"
+
+## Hook the cue up to the Voice
+1. In the package contents pane, right-click on the Archetype object (_$ModSafeName$VoiceArchetype) and choose Properties
+2. Expand the 'Robo Jumper Character Voice [...]' panel
+3. Expand the 'Events' list
+4. Find the event with the EventName "Dashing" ([19] as of writing)
+5. Expand this event
+6. In the package contents pane, select the SoundCue "$ModSafeName$_Cue_Dashing" object
+7. In the Archetype properties window, click the green arrow, next to the Cue item under the Dashing event
+8. Close the Archetype properties window
+
+## Save the package
+
+1. Press Ctrl-S
+2. Click "Yes" in the warning Message that appears about references to external packages
+
+## Testing this bark
+1. Close the Content Browser and Unreal Editor windows
+2. Return to XCOM ModBuddy
+3. Menus > BUILD > Build Solution
+
+4. Start the XCOM 2 launcher
+5. Enable your mod
+6. Start the game, go to the Character Bank
+7. 
+
+
+# Notes on sound files
+Importing sound files into the Unreal Editor logs the filesystem location and import time in the package itself. It's unlikely that this is a major worry for you, but you should be aware that it could leak some information to the rest of the world (e.g. your Windows username).
+
+Files MUST be 16-bit mono PCM .WAV files with a sample rate of 44100 Hz or 22050 Hz. An example use of ffmpeg might be:
+
+```
+ffmpeg -i MyInputFile.mp3 -sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Snd_Dashing_1.wav
+```
+
+To simultaneous add a radio effect (high- and lowpass) and normalise the audio to -6dB, this might be extended to:
+```
+ffmpeg -i MyInputFile.mp3 -af "highpass=f=150, lowpass=f=10000, loudnorm=lra=6.0" \
+-sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Snd_Dashing_1.wav
+
+```
+
+Tutorials are available elsewhere on using Audacity to achieve similar results.
+
+
+For mods adding a single voice, I suggest (for your sanity) a naming scheme like:
+
+```
+$ModSafeName$_Snd_Dashing_1.wav
+$ModSafeName$_Snd_Dashing_2.wav
+```
+
+# Changing details
+To change the name displayed in the XCOM 2 character customisation screen, investigate the \Localisation\XComGame.int file.
+
+To change the gender restrictions, language hints and to enable Spark and WotC classes, investigate the \Config\XComContent.ini file.
+
+# Credits
+
+RoboJumper, for the voice script.
+
+## How to create a voice pack
+https://docs.google.com/document/d/1asHlhTP9tJzyKXIwDALpWdJTVasjh-72blST9kQeai8
+https://docs.google.com/document/d/1v8jU86Jeqn9wms4Pxjj7f5tHPlmli6TSogrbWvc5vUA
+
+## Audio advice
+https://steamcommunity.com/sharedfiles/filedetails/?id=1350627939
+
+## Cue lists
+https://docs.google.com/spreadsheets/d/1Ndt1bB1830tfy3gz26G779eR36YSutNO2Ugk16BgONE/edit#gid=875621329
+
+

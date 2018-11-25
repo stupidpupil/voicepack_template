@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<Guid>$guid1$</Guid>
+    <Name>$Name$</Name>
+    <Description>$Description$</Description>
+    <SteamPublishID>0</SteamPublishID>
+	</PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Content\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\$ModSafeName$\"/>
+    <Folder Include="Src\$ModSafeName$\Classes\"/>
+  </ItemGroup>
+  <ItemGroup>
+		<Content Include="Instructions.txt" />
+    <Content Include="ModPreview.jpg"/>
+    <Content Include="Config\XComEditor.ini"/>
+    <Content Include="Config\XComEngine.ini"/>
+    <Content Include="Config\XComGame.ini"/>
+    <Content Include="Config\XComContent.ini"/>
+    <Content Include="Content\NamingInfo.txt"/>
+    <Content Include="Localization\XComGame.int"/>
+    <Content Include="Src\$ModSafeName$\Classes\X2DownloadableContentInfo_$ModSafeName$.uc" />
+    <Content Include="Src\$ModSafeName$\Classes\RoboJumperCharacterVoice_$ModSafeName$.uc" />
+
+  </ItemGroup>  
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets"/>
+
+  <!-- 
+    Overrides the XCOM2.targets Build target 
+    - Doesn't compile shaders
+  -->
+  <Target Name="Build" DependsOnTargets="Clean">
+    <Message Text="Building Mod project..." />
+    <!-- Create all relative well-known folders. -->
+    <Message Importance="High" Text="Creating target folder structure..." />
+    <MakeDir Directories="$(OutputDir)Classes;$(OutputDir)Config;$(OutputDir)Content;$(OutputDir)Localization;$(OutputDir)\Script" />
+    <ItemGroup>
+      <!-- ConfigFiles is a bucket that includes all .ini files. -->
+      <!-- These will be copied to the "Config" folder. -->
+      <ConfigFiles Include="@(Content)" Condition="'%(Extension)' == '.ini'">
+        <TargetDir>$(OutputDir)%(RelativeDir)</TargetDir>
+        <TargetPath>$(OutputDir)%(Identity)</TargetPath>
+      </ConfigFiles>
+      <!-- ScriptFiles is a bucket that includes all .uc files. -->
+      <!-- These will be copied to the "Classes" folder. -->
+      <ScriptFiles Include="@(Content)" Condition="'%(Extension)' == '.uc'">
+        <TargetDir>$(OutputDir)%(RelativeDir)</TargetDir>
+        <TargetPath>$(OutputDir)%(Identity)</TargetPath>
+      </ScriptFiles>
+      <!-- TextFiles is a bucket that includes all .txt files. -->
+      <!-- These will be copied to the root folder.-->
+      <TextFiles Include="@(Content)" Condition="'%(Extension)' == '.txt'">
+        <TargetDir>$(OutputDir)</TargetDir>
+        <TargetPath>$(OutputDir)%(Filename)%(Extension)</TargetPath>
+      </TextFiles>
+    </ItemGroup>
+    <ItemGroup>
+      <!-- ContentFiles is the bucket that includes everything else. -->
+      <!-- These are copied to the "Content" folder.-->
+      <ContentFiles Include="@(Content)" Exclude="@(ConfigFiles);@(ScriptFiles);@(TextFiles)">
+        <TargetDir>$(OutputDir)%(RelativeDir)</TargetDir>
+        <TargetPath>$(OutputDir)%(Identity)</TargetPath>
+      </ContentFiles>
+    </ItemGroup>
+    <!-- Copy all files to TargetPath-->
+    <Message Importance="High" Text="Copying files..." />
+    <Copy SourceFiles="@(ConfigFiles);@(ScriptFiles);@(TextFiles);@(ContentFiles)" SkipUnchangedFiles="true" DestinationFiles="%(TargetPath)">
+      <Output TaskParameter="CopiedFiles" ItemName="_CopiedFiles" />
+    </Copy>
+    <!-- Generate mod info file. -->
+    <!-- In the future, we may want to include a manifest of all files in the mod for validation -->
+    <GenerateModInfo ID="$(Guid)" Name="$(Name)" Description="$(Description)" TargetPath="$(OutputDir)$(SafeName).XComMod" SolutionDir="$(SolutionDir)" GamePath="$(XCOM2_GamePath)" UserPath="$(XCOM2_UserPath)" />
+    <!-- Compile script code -->
+    <CompileScripts ModSafeName="$(SafeName)" SolutionName="$(SolutionName)" SolutionDir="$(SolutionDir)" OutputDir="$(OutputDir)" Config="$(Configuration)" />
+    <!-- 
+    <CompileShaders
+      ModSafeName="$(SafeName)"
+      SolutionName="$(SolutionName)"
+      SolutionDir="$(SolutionDir)"
+      OutputDir="$(OutputDir)"/> -->
+
+    <Delete Files="$(OutputDir)\NamingInfo.txt" />
+
+    <!-- Delete empty folders, copy to the installed game dir for testing -->
+    <Message Importance="High" Text="Removing empty directories..." />
+    <ProcessDirectories Directories="$(OutputDir)" GamePath="$(XCOM2_GamePath)" UserPath="$(XCOM2_UserPath)" ModName="$(SafeName)" DeleteBaseFolder="false" />
+  </Target>
+
+
+</Project>
