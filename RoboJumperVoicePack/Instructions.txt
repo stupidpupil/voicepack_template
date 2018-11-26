@@ -73,14 +73,14 @@ You may want to review the "Notes on sound files" section before proceeding.
 
 ## Importing a sound file
 1. In the Content Browser window, press the "Import" button
-2. Open your first sound file
+2. Open your first sound file (e.g. "$ModSafeName$_Dashing_01.wav")
 3. Leave the default options and click "OK"
 
 ## Creating a sound cue
 1. Right-click in the background of the package contents pane and choose "New SoundCue"
-2. Set the name to "$ModSafeName$_Cue_Dashing" 
+2. Set the name to "$ModSafeName$_Dashing_Cue" 
 
-You don't have to use this naming convention for SoundCues, but I strongly suggest you do so.
+You don't have to use this naming convention for SoundNodeWaves and SoundCues, but I strongly suggest you do so. This keeps SoundNodeWaves and their SoundCues grouped together helpfully when sorting the package contents by name.
 
 3. In the package contents pane, select the SoundNodeWave you added earlier
 4. In the Unreal SoundCue Editor, right-click and choose "Random: [...]"
@@ -126,7 +126,7 @@ Files MUST be 16-bit mono PCM .WAV files with a sample rate of 44100 Hz or 22050
 
 ```
 ffmpeg -i MyInputFile.mp3 \
--sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Snd_Dashing_01.wav
+-sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Dashing_01.wav
 ```
 
 ## Volume
@@ -147,7 +147,7 @@ An example use of ffmpeg might be:
 
 ```
 ffmpeg -i MyInputFile.mp3 -af "loudnorm=I=-14" \
--sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Snd_Dashing_01.wav
+-sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Dashing_01.wav
 ```
 
 ## Radio effect
@@ -155,7 +155,7 @@ ffmpeg -i MyInputFile.mp3 -af "loudnorm=I=-14" \
 To add a radio effect (high- and lowpass) in ffmpeg this might be extended to:
 ```
 ffmpeg -i MyInputFile.mp3 -af "highpass=f=150, lowpass=f=10000, loudnorm=I=-14" \
--sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Snd_Dashing_01.wav
+-sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Dashing_01.wav
 
 ```
 
@@ -165,8 +165,8 @@ Tutorials are available elsewhere on using Audacity to achieve similar results.
 For mods adding a single voice, I suggest (for your sanity) a naming scheme for your final sound files like:
 
 ```
-$ModSafeName$_Snd_Dashing_01.wav
-$ModSafeName$_Snd_Dashing_02.wav
+$ModSafeName$_Dashing_01.wav
+$ModSafeName$_Dashing_02.wav
 ```
 
 # Changing details
