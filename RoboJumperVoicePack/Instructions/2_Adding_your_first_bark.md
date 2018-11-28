@@ -1,6 +1,7 @@
 # Adding your first bark
 
-This sections goes through the process of adding a 'Dashing' bark. This the bark played when previewing a voice in the character customisation screen.
+This sections goes through the process of adding a 'Dashing' bark. 
+This the bark played when previewing a voice in the character customisation screen.
 
 You may want to review the "Notes on sound files" section before proceeding.
 
@@ -18,14 +19,16 @@ You may want to review the "Notes on sound files" section before proceeding.
 1. Right-click in the background of the package contents pane and choose "New SoundCue"
 2. Set the name to "$ModSafeName$_Dashing_Cue" 
 
-You don't have to use this naming convention for SoundNodeWaves and SoundCues, but I strongly suggest you do so. This keeps SoundNodeWaves and their SoundCues grouped together helpfully when sorting the package contents by name.
+You don't have to use this naming convention for SoundNodeWaves and SoundCues, but I strongly suggest you do so. 
+This keeps SoundNodeWaves and their SoundCues grouped together helpfully when sorting the package contents by name.
 
 3. In the package contents pane, select the SoundNodeWave you added earlier
 4. In the Unreal SoundCue Editor, right-click and choose "Random: [...]"
-5. Click-and-drag from the black connection point on the right-hand-side of the speaker to the connection point on the left-hand-side of the "Random" node.
+5. Click-and-drag from the black connection point on the right-hand-side of the speaker 
+to the connection point on the left-hand-side of the "Random" node.
 6. Close the Unreal SoundCue Editor window.
 
-You can select multiple SoundNodeWaves, and the Random node will pick between them when the cue is triggered.
+You can select multiple SoundNodeWaves at Step 3, and the Random node will pick between them when the cue is triggered.
 
 7. In the package contents pane, right-click on the $ModSafeName$_Dashing_Cue object and choose "Sound Classes [...]" > "Voice"
 

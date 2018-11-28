@@ -1,8 +1,12 @@
 # Setting up the package
 
-These instructions assume that you've setup the XCOM 2 SDK correctly. If you haven't, or you're not sure that you have, you should investigate the [instructions on the r/xcom2mods wiki](https://www.reddit.com/r/xcom2mods/wiki/firsttime).
+These instructions assume that you've setup the XCOM 2 SDK correctly. 
+If you haven't, or you're not sure that you have, you should investigate the 
+[instructions on the r/xcom2mods wiki](https://www.reddit.com/r/xcom2mods/wiki/firsttime).
 
-If you're quite familiar with XCOM 2 modding (or just modding Unreal Engine games) you can find most of the important information in these instructions in the `Content\NamingInfo.txt` file.
+If you're quite familiar with XCOM 2 modding (or just modding Unreal Engine games) 
+you can find most of the important information in these instructions in the 
+`Content\NamingInfo.txt` file.
 
 ## Open the Unreal Editor
 
@@ -44,7 +48,9 @@ You MUST name this object "_$ModSafeName$VoiceArchetype".
 5. Navigate to your mod's content folder
 6. Save the package with its default name
 
-(e.g. %USERPROFILE%\Documents\Firaxis ModBuddy\XCOM\$ModSafeName$\$ModSafeName$\Content\$ModSafeName$Pkg.upk - this might not be quite right depending on what you've named stuff when you first created the mod.)
+(The package should end up somewhere like:
+`%USERPROFILE%\Documents\Firaxis ModBuddy\XCOM\$ModSafeName$\$ModSafeName$\Content\$ModSafeName$Pkg.upk` 
+- this might not be quite right depending on what you've named stuff when you first created the mod.)
 
 ## Add the package to your mod project
 1. Close the Content Browser and Unreal Editor windows
