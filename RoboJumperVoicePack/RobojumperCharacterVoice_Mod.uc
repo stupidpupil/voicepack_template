@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------------
 //  FILE:   RobojumperCharacterVoice_$ModSafeName$.uc                                    
 //  
-//  Based on a version from https://pastebin.com/dpmkwX0Y on 25th November 2018
+//  Based on a version from https://pastebin.com/fU37XMTF on 26th November 2018
 //  Almost entirely by Robojumper (https://github.com/robojumper)
 //  
 //---------------------------------------------------------------------------------------
@@ -23,7 +23,6 @@ function PlaySoundForEvent(Name nEvent, Actor Owner)
 	local bool bProfileSettingsEnabledChatter;
 	local bool bKismetDisabledChatter;
 	local bool bChatterDisabledByINI;
-	local array<string> EventStrings;
 
 	bProfileSettingsEnabledChatter = `XPROFILESETTINGS != none && `XPROFILESETTINGS.Data.m_bEnableSoldierSpeech;
 	bKismetDisabledChatter = `BATTLE != none && `BATTLE.m_kDesc.m_bDisableSoldierChatter;
@@ -32,35 +31,44 @@ function PlaySoundForEvent(Name nEvent, Actor Owner)
 	if(!bProfileSettingsEnabledChatter || bKismetDisabledChatter || bChatterDisabledByINI)
 		return;
 
-	// It is normal to not get a cue, some sound banks will not include a cue for certain events
-	// e.g. You don't always need a soldier to talk when he throws a grenade or dashes
-	Cue = FindSoundCue(nEvent);
+	Cue = FindSoundCueWithFallbacks(nEvent);
 	if (Cue != none)
-	{
 		Owner.PlaySound(Cue, true);
-		return;
-	}
 
-	//If we didn't find a match, see if this was a whisper line or personality line. If so, try falling back to the regular variant.
-	EventStrings = SplitString(string(nEvent), "_");
-	if(EventStrings.Length > 0)
+	//if (`PRES != none)
+	//	`PRES.GetWorldMessenger().Message(string(nEvent), Owner.Location);
+}
+
+
+function SoundCue FindSoundCueWithFallbacks(name nmEvent)
+{
+	local SoundCue Cue;
+	local array<string> EventStrings;
+
+	Cue = FindSoundCue(nmEvent);
+	if (Cue != none)
+		return Cue;
+
+	// Remove attitude (e.g. '_BY_THE_BOOK') or whisper qualifier ('_w')
+	EventStrings = SplitString(string(nmEvent), "_");
+	if (EventStrings.Length >= 2)
 	{
 		Cue = FindSoundCue(Name(EventStrings[0]));
-		if(Cue != none)
-		{
-			Owner.PlaySound(Cue, true);
-		}
+		if (Cue != none)
+			return Cue;	
 	}
+
+	return none;
 }
 
 function SoundCue FindSoundCue(name nmEvent)
 {
 	local int i;
 	i = Events.Find('EventName', nmEvent);
+	
 	if (i != INDEX_NONE)
-	{
 		return Events[i].Cue;
-	}
+	
 	`log("Unhandled event:" @ nmEvent);
 	return none;
 }
