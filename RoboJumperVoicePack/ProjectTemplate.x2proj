@@ -7,6 +7,9 @@
     <SteamPublishID>0</SteamPublishID>
 	</PropertyGroup>
   <ItemGroup>
+
+
+    <Folder Include="Instructions\" />
     <Folder Include="Config\" />
     <Folder Include="Content\" />
     <Folder Include="Localization\" />
@@ -14,12 +17,9 @@
     <Folder Include="Src\$ModSafeName$\"/>
     <Folder Include="Src\$ModSafeName$\Classes\"/>
 
-    <Folder Include="Instructions\" />
 
   </ItemGroup>
   <ItemGroup>
-		<Content Include="Instructions.txt" />
-
     <Content Include="Instructions\0_Instructions.md"/>
     <Content Include="Instructions\1_Setting_up_the_package.md"/>
     <Content Include="Instructions\2_Adding_your_first_bark.md"/>
@@ -27,11 +27,11 @@
     <Content Include="Instructions\4_Customising_the_mod.md"/>
     <Content Include="Instructions\X_Credits.md"/>
 
-    
     <Content Include="Config\XComEditor.ini"/>
     <Content Include="Config\XComEngine.ini"/>
     <Content Include="Config\XComGame.ini"/>
     <Content Include="Config\XComContent.ini"/>
+
     <Content Include="Content\NamingInfo.txt"/>
 
     <Content Include="Localization\XComGame.int"/>
