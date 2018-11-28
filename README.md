@@ -8,7 +8,7 @@ This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojump
 - Avoids the use of VoiceBanks (Thanks to Robojumper)
 - Can provide in-game debug messages to show when events occur (Thanks to Robojumper)
 - Prepopulates `Config\XComContent.ini` and `Localization\XComGame.int`
-- Tells you clearly how to setup content in your UPK
+- Tells you clearly how to setup and name content in the mod's UPK
 - Avoids producing a shader cache when rebuilding
 
 
@@ -18,9 +18,10 @@ This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojump
 
 2. Place the zip file in `...\SteamApps\common\XCOM 2 SDK\Binaries\Win 32\ModBuddy\Extensions\Application\ProjectTemplates\XCOM2Mod\1033\`
 
-3. Create a new project in ModBuddy and select the RobojumperVoicePack template.
+3. Create a new project in ModBuddy and select the *Voice Pack with Robojumper script* template.
 
 4. Follow the instructions.
+
 
 # LICENSE
 
