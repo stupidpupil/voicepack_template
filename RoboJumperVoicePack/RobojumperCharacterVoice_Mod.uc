@@ -9,6 +9,7 @@
 
 class RobojumperCharacterVoice_$ModSafeName$ extends XComCharacterVoice;
 
+
 struct SoundCueMap
 {
 	var() name EventName;
@@ -16,6 +17,10 @@ struct SoundCueMap
 };
 
 var() editinline array<SoundCueMap> Events;
+
+// To enable DEBUG features, set this to 'true'
+// in the 'defaultproperties' block further down
+var bool DEBUG;
 
 function PlaySoundForEvent(Name nEvent, Actor Owner)
 {
@@ -28,6 +33,9 @@ function PlaySoundForEvent(Name nEvent, Actor Owner)
 	bKismetDisabledChatter = `BATTLE != none && `BATTLE.m_kDesc.m_bDisableSoldierChatter;
 	bChatterDisabledByINI = class'X2BodyPartTemplateManager'.static.GetBodyPartTemplateManager().DisableCharacterVoices;
 
+	if (DEBUG && `PRES != none)
+		`PRES.GetWorldMessenger().Message(string(nEvent), Owner.Location);
+
 	if(!bProfileSettingsEnabledChatter || bKismetDisabledChatter || bChatterDisabledByINI)
 		return;
 
@@ -35,8 +43,6 @@ function PlaySoundForEvent(Name nEvent, Actor Owner)
 	if (Cue != none)
 		Owner.PlaySound(Cue, true);
 
-	//if (`PRES != none)
-	//	`PRES.GetWorldMessenger().Message(string(nEvent), Owner.Location);
 }
 
 
@@ -76,6 +82,8 @@ function SoundCue FindSoundCue(name nmEvent)
 
 defaultproperties
 {
+	DEBUG = false; // Set to 'true' to show popup messages
+
 	Events.Add((EventName="ADVENTsighting"))
 	Events.Add((EventName="Acid"))
 	Events.Add((EventName="ActivateConcealment"))
