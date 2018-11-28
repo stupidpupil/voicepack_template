@@ -13,16 +13,29 @@
     <Folder Include="Src\" />
     <Folder Include="Src\$ModSafeName$\"/>
     <Folder Include="Src\$ModSafeName$\Classes\"/>
+
+    <Folder Include="Instructions\" />
+
   </ItemGroup>
   <ItemGroup>
 		<Content Include="Instructions.txt" />
-    <Content Include="ModPreview.jpg"/>
+
+    <Content Include="Instructions\0_Instructions.md"/>
+    <Content Include="Instructions\1_Setting_up_the_package.md"/>
+    <Content Include="Instructions\2_Adding_your_first_bark.md"/>
+    <Content Include="Instructions\3_Notes_on_sound_files.md"/>
+    <Content Include="Instructions\4_Customising_the_mod.md"/>
+    <Content Include="Instructions\X_Credits.md"/>
+
+    
     <Content Include="Config\XComEditor.ini"/>
     <Content Include="Config\XComEngine.ini"/>
     <Content Include="Config\XComGame.ini"/>
     <Content Include="Config\XComContent.ini"/>
     <Content Include="Content\NamingInfo.txt"/>
+
     <Content Include="Localization\XComGame.int"/>
+
     <Content Include="Src\$ModSafeName$\Classes\X2DownloadableContentInfo_$ModSafeName$.uc" />
     <Content Include="Src\$ModSafeName$\Classes\RobojumperCharacterVoice_$ModSafeName$.uc" />
 

@@ -16,7 +16,17 @@ Vanilla and WotC-compatible.</Description>
   <TemplateContent>
     <Project File="ProjectTemplate.x2proj" ReplaceParameters="true">
       <ProjectItem>ModPreview.jpg</ProjectItem>
-      <ProjectItem ReplaceParameters="true" OpenInEditor="true">Instructions.txt</ProjectItem>      
+
+
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">Instructions\0_Instructions.md</ProjectItem>
+      <ProjectItem ReplaceParameters="true" >Instructions\1_Setting_up_the_package.md</ProjectItem>
+      <ProjectItem ReplaceParameters="true" >Instructions\2_Adding_your_first_bark.md</ProjectItem>
+      <ProjectItem ReplaceParameters="true" >Instructions\3_Notes_on_sound_files.md</ProjectItem>
+      <ProjectItem ReplaceParameters="true" >Instructions\4_Customising_the_mod.md</ProjectItem>
+      <ProjectItem ReplaceParameters="true" >Instructions\X_Credits.md</ProjectItem>
+
+
+
       <ProjectItem ReplaceParameters="true">Config\XComEditor.ini</ProjectItem>
       <ProjectItem ReplaceParameters="true">Config\XComEngine.ini</ProjectItem>
       <ProjectItem ReplaceParameters="true">Config\XComGame.ini</ProjectItem>
