@@ -28,4 +28,4 @@ The parts of this template that I have written are licensed under the [MIT licen
 
 Parts of the template are reproduced verbatim from the templates distributed with the SDK, these remain copyright to Firaxis Games. There are reproduced here on the basis that doing so follows the purposes of releasing the SDK and that they are minimally non-obvious.
 
-Robojumper's script is reproduced here, with attribution and permission, on the basis that they have seemingly released it freely into the public domain.
+Robojumper's script is reproduced here, with some minor changes, with attribution and permission.
