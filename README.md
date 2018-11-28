@@ -4,9 +4,12 @@ This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojump
 
 # Features
 
+## ... of Robojumper's voice script
 - Supports more XCOM 2 and WotC voice cues (and custom cues for use with other mods)
-- Avoids the use of VoiceBanks (Thanks to Robojumper)
-- Can provide in-game popup messages to help debug when events occur (Thanks to Robojumper)
+- Avoids the use of VoiceBanks
+- Can provide in-game popup messages to help debug when events occur
+
+## ... of this template
 - Prepopulates `Config\XComContent.ini` and `Localization\XComGame.int`
 - Tells you clearly how to setup and name content in the mod's UPK
 - Avoids producing a shader cache when rebuilding
