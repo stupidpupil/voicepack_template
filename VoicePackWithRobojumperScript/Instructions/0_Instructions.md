@@ -17,3 +17,6 @@ This instructions folder has the following chapters
  - Notes on sound files (what formats are required, etc.)
  - Customising details of the mod (gender restrictions, voice name)
  - Credits
+
+ For a list of the sound cues that this template supports, and under what circumstances that the play, see:  
+ https://docs.google.com/spreadsheets/d/10nvJjtUMIvddWRPKUaKMBv4yyiMHjWVSwdeG07YZF0o/

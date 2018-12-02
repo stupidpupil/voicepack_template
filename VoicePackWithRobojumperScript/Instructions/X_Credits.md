@@ -9,8 +9,3 @@ nintendoeat's guide to using UDK tags - https://steamcommunity.com/sharedfiles/f
 
 ## Audio advice
 nintendoeats's guide to processing audio from TV - https://steamcommunity.com/sharedfiles/filedetails/?id=1350627939
-
-## Cue lists
-Grouped list with description - https://docs.google.com/spreadsheets/d/1Ndt1bB1830tfy3gz26G779eR36YSutNO2Ugk16BgONE
-ObelixDk's list with advice about most common lines - https://pastebin.com/PsSiP4Lt
-13y59m's Russian guide - https://steamcommunity.com/sharedfiles/filedetails/?id=881334126&searchtext=visuals

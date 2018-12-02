@@ -29,8 +29,8 @@ There are several factors that affect how loud the barks actually sound compared
 
 My understanding is the following: The sound files for the built-in barks often have an 
 average loudness of about -10 or -11dB (relative to the maximum that PCM can express) 
-with some shouts of pain being a bit louder. The average volume for these barks then reduced 
-to about -14 or -15dB by the two 0.75 volume multipliers.
+with some shouts of pain being a bit louder. The average volume for these barks is then 
+reduced to about -14 or -15dB by the two 0.75 volume multipliers.
 
 I suggest that sensible starting point when creating voice parks is to:
 - target an 'integrated loudness' of about -14dB in the sound files, and
@@ -48,7 +48,7 @@ ffmpeg -i MyInputFile.mp3 -af "loudnorm=I=-14" \
 
 To add a radio effect (high- and lowpass) in ffmpeg this might be extended to:
 ```
-ffmpeg -i MyInputFile.mp3 -af "highpass=f=150, lowpass=f=10000, loudnorm=I=-14" \
+ffmpeg -i MyInputFile.mp3 -af "highpass=f=150, lowpass=f=5000, loudnorm=I=-14" \
 -sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Dashing_01.wav
 
 ```
