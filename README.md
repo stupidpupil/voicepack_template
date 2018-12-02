@@ -22,7 +22,7 @@ This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojump
 
 3. Create a new project in ModBuddy and select the *Voice Pack with Robojumper script* template.
 
-4. Follow the instructions.
+4. Follow the instructions. ([Preview these here.](https://github.com/stupidpupil/voicepack_template/tree/master/VoicePackWithRobojumperScript/Instructions))
 
 
 # LICENSE
