@@ -13,7 +13,7 @@ This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojump
 - Produces a mod that's compatible with *both* vanilla and WotC XCOM 2
 - Prepopulates `Config\XComContent.ini` and `Localization\XComGame.int`
 - Tells you clearly how to setup and name content in the mod's UPK
-- Avoids producing a shader cache when rebuilding
+- Avoids producing a shader cache when rebuilding (Avoiding [this bug](https://www.reddit.com/r/xcom2mods/comments/48c8v3/psavoicepacks_and_other_mods_to_a_lesser_extent/).)
 
 # Using
 
