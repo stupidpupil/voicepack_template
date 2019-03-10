@@ -4,9 +4,9 @@ This file references using the command-line program ffmpeg to manipulate sound f
 Tutorials are available elsewhere on using [Audacity](https://www.audacityteam.org/) 
 to achieve similar results.
 
-## Leaking informtion
+## Leaking information
 
-Importing sound files into the Unreal Editor logs the filesystem location and import time 
+Importing sound files into the Unreal Editor, logs the filesystem location and import time 
 in the package itself.  It's unlikely that this is a major worry for you, but you should 
 be aware that it could leak some information to the rest of the world (e.g. your Windows username).
 
@@ -48,10 +48,12 @@ ffmpeg -i MyInputFile.mp3 -af "loudnorm=I=-14" \
 
 To add a radio effect (high- and lowpass) in ffmpeg this might be extended to:
 ```
-ffmpeg -i MyInputFile.mp3 -af "highpass=f=150, lowpass=f=5000, loudnorm=I=-14" \
+ffmpeg -i MyInputFile.mp3 -af "highpass=f=500, lowpass=f=2700, loudnorm=I=-14" \
 -sample_fmt s16 -ar 44100 -ac 1 $ModSafeName$_Dashing_01.wav
 
 ```
+
+You might want to normalise, apply the radio effect, and then normalise again.
 
 ## Suggested naming
 
