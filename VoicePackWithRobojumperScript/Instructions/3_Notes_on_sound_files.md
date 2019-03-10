@@ -6,7 +6,7 @@ to achieve similar results.
 
 ## Leaking information
 
-Importing sound files into the Unreal Editor, logs the filesystem location and import time 
+When you sound files in to a package using the Unreal Editor, it will log the filesystem location and import time 
 in the package itself.  It's unlikely that this is a major worry for you, but you should 
 be aware that it could leak some information to the rest of the world (e.g. your Windows username).
 
