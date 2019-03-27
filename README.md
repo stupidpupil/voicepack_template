@@ -17,13 +17,15 @@ This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojump
 
 # Using
 
-1. Download the latest release as a zip file.
+1. Download [the latest release as a zip file](https://github.com/stupidpupil/voicepack_template).
 
-2. Place the zip file in `...\SteamApps\common\XCOM 2 SDK\Binaries\Win 32\ModBuddy\Extensions\Application\ProjectTemplates\XCOM2Mod\1033\`
+2. Place that zip file in `...\SteamApps\common\XCOM 2 SDK\Binaries\Win 32\ModBuddy\Extensions\Application\ProjectTemplates\XCOM2Mod\1033\`
 
 3. Create a new project in ModBuddy and select the *Voice Pack with Robojumper script* template.
 
-4. Follow the instructions. ([Preview these here.](https://github.com/stupidpupil/voicepack_template/tree/master/VoicePackWithRobojumperScript/Instructions))
+4. Use the **same** name (e.g. 'MyNicknameMyCoolVoiceMod') for the *Name* of your project, the *Solution name* and the *Title* of your mod. ([See this video for an example.](https://www.youtube.com/watch?v=5hRLr86eRik&feature=youtu.be))
+
+5. Follow the instructions. ([*Preview* these here.](https://github.com/stupidpupil/voicepack_template/tree/master/VoicePackWithRobojumperScript/Instructions) Note that $ModSafeName$ will be replaced with the actual name of your mod.)
 
 # LICENSE
 
