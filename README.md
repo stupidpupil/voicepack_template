@@ -17,7 +17,7 @@ This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojump
 
 # Using
 
-1. Download [the latest release as a zip file](https://github.com/stupidpupil/voicepack_template).
+1. Download [the latest release as a zip file](https://github.com/stupidpupil/voicepack_template/releases).
 
 2. Place that zip file in `...\SteamApps\common\XCOM 2 SDK\Binaries\Win32\ModBuddy\Extensions\Application\ProjectTemplates\XCOM2Mod\1033\`
 
