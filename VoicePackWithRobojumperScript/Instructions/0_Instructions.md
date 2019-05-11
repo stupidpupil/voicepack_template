@@ -16,6 +16,7 @@ This instructions folder has the following chapters
  - Adding your first bark (adding a sound file to the package and hooking it up Robojumper's script via a sound cue)
  - Notes on sound files (what formats are required, etc.)
  - Customising details of the mod (gender restrictions, voice name)
+ - Uploading your mod to the workshop (mostly opinionated advice)
  - Credits
 
  For a list of the sound cues that this template supports, and under what circumstances that the play, see:  
