@@ -2,7 +2,7 @@
 
 This file references using the command-line program ffmpeg to manipulate sound files.
 Tutorials are available elsewhere on using [Audacity](https://www.audacityteam.org/) 
-to achieve similar results.
+to achieve similar results (e.g. [*nintendoeat*'s guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1350627939)).
 
 ## Leaking information
 
