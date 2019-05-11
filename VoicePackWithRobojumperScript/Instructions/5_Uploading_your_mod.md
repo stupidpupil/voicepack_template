@@ -37,9 +37,9 @@ but it's obviously your choice!
 
 ## Images and videos
 
-*Preview* images should be 256x256 pixels. I don't think you need to add 
-prominent *XCOM 2* or *WOTC* logos to your preview image since mostly people
-will find your mod by looking at the *XCOM 2* workshop.
+*Preview* images (which appear as the square images in the workshop) 
+should be 256x256 pixels. I don't think you need to add prominent *XCOM 2* or *WOTC* 
+logos to your preview image since mostly people will find your mod by looking at the *XCOM 2* workshop.
 
 Preview videos are helpful, particularly if they show some actual gameplay
 (and not just you hitting the *PREVIEW* button in the customisation screen).
