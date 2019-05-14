@@ -22,6 +22,7 @@ Vanilla and WotC-compatible.</Description>
       <ProjectItem ReplaceParameters="true" >Instructions\2_Adding_your_first_bark.md</ProjectItem>
       <ProjectItem ReplaceParameters="true" >Instructions\3_Notes_on_sound_files.md</ProjectItem>
       <ProjectItem ReplaceParameters="true" >Instructions\4_Customising_the_mod.md</ProjectItem>
+      <ProjectItem ReplaceParameters="true" >Instructions\5_Uploading_your_mod.md</ProjectItem>
       <ProjectItem ReplaceParameters="true" >Instructions\X_Credits.md</ProjectItem>
 
       <ProjectItem ReplaceParameters="true">Config\XComEditor.ini</ProjectItem>
