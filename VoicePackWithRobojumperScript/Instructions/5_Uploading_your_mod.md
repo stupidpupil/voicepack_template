@@ -3,7 +3,8 @@
 The [Alternative Mod Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=1134322341), 
 also by Robojumper, is easier to use than the one built into ModBuddy.
 
-These instructions below are highly opinionated and reflect my personal preferences! You can ignore them if you like.
+These instructions below are highly opinionated and reflect my personal preferences! 
+You can ignore them if you like.
 
 ## Name of the mod
 
@@ -52,6 +53,6 @@ find it when looking for voice packs, and the second so that people can easily
 see that it should be compatible with WOTC.)
 
 Please don't use the *Soldier Customisation* tag (etc.) - this is mostly used
-by people adding visual customisation (e.g. armour, clothes, hair) and it makes
+by people adding visual customisation ('cosmetics' - e.g. armour, clothes, hair) and it makes
 it easier for people browsing the workshop if we don't stick voice packs in there too.
 
