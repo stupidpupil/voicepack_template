@@ -27,6 +27,7 @@ I think the following information is useful:
  * How many unique lines does the voice pack include? (Doesn't need to be precise. '100+', for example.)
  * What gender and language is associated with the voice?
  * Is the voice enabled for WOTC faction characters, Sparks etc.?
+ * Is the voice XCOM-lore-friendly? (Does it mention characters or concepts from elsewhere?)
 
 I also think it's polite to give a little info about where the lines came from, and who the voice actor was.
 
