@@ -2,6 +2,8 @@
 
 This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojumper's voice script and drawing heavily on [Kregano's tutorial](https://docs.google.com/document/d/1asHlhTP9tJzyKXIwDALpWdJTVasjh-72blST9kQeai8).
 
+**Don't just download files and try to edit them by hand. Follow [the *Using* section below](https://github.com/stupidpupil/voicepack_template#Using).**
+
 # Features
 
 ## ... of Robojumper's voice script
