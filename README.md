@@ -2,7 +2,7 @@
 
 This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojumper's voice script and drawing heavily on [Kregano's tutorial](https://docs.google.com/document/d/1asHlhTP9tJzyKXIwDALpWdJTVasjh-72blST9kQeai8).
 
-**Don't just download files and try to edit them by hand. Follow [the *Using* section below](https://github.com/stupidpupil/voicepack_template#Using).**
+***Don't* just download files and try to edit them by hand. Follow [the *Using* section below](https://github.com/stupidpupil/voicepack_template#Using).**
 
 # Features
 
@@ -18,10 +18,11 @@ This is an XCOM 2 ModBuddy template for creating voice pack mods, using Robojump
 - Avoids producing a shader cache when rebuilding (Avoiding [this bug](https://www.reddit.com/r/xcom2mods/comments/48c8v3/psavoicepacks_and_other_mods_to_a_lesser_extent/).)
 
 # Using
+You ***cannot*** just download this and edit the files. You ***must*** install and use it as a ModBuddy template as described below.
 
 1. Download [the latest release as a zip file](https://github.com/stupidpupil/voicepack_template/releases).
 
-2. Place that zip file in `...\SteamApps\common\XCOM 2 SDK\Binaries\Win32\ModBuddy\Extensions\Application\ProjectTemplates\XCOM2Mod\1033\`
+2. Place that zip file in `...\SteamApps\common\XCOM 2 SDK\Binaries\Win32\ModBuddy\Extensions\Application\ProjectTemplates\XCOM2Mod\1033\` (where the location of *SteamApps* depends on where the Steam Library is that you installed the XCOM 2 SDK to).
 
 3. Create a new project in ModBuddy and select the *Voice Pack with Robojumper script* template.
 
