@@ -1,0 +1,16 @@
+language: bash
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install -qq xmllint zip
+script:
+- bash test_and_build.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: hUehGEEstfQCiJ/2mc8Y7HQ9ApnO0bXdAkDkKizTe4OUxV1WZFWcDf555mQQekxVSkti70y8rMvwju3Tzr9XNgCjOpmoZXzQOsmy5RwD5L8WF2ey1dBmST8P0wvvenIeVmGi9bSGHMmEjqX7wwWEMqp4ngXPQiPBjToQtYcy7RilpXSlVF6CVGzw9wl8id24mLkbxugpzbBUkgoX3xN5fNOKld3RThJKcDWE6lvfC/+7kz5ZJx3mGhUj/qJUc+47VNuSiilGcz8TD0A8Um1pbQ349txGYj+38H/YBHjZmIo1uBY2gsSDkzxYkos+C1vgigBrLC9Qqofk9IrFC3460euL3fP5eJGK5+JgmDQe2MT9g8w/OWYTkTlFBjfuUoTMW9IfbVM5C+8whznZQmjySFXoI3s1RBfkys9726v/uc51SSPxZmoCSEAaLoSXQZ2GqS9q3nZhwd6MQpx8imHOlSWASJ8ZT4DGKLJLMHyYuVHejFkpAC9pP2nDMlZ4s8BOvua987MpK0ByM/x88yOahjGFC+tCo2tF5v48iCM5CY9DsTSYAxnca8va32H2ag2qltRnLs1G1dHnnVAbJvNHly0cyvq9pDuSdRHCeQtT0Qn1gPrDtWvs+y/GypdIOYzCsW8AHAzYAkiMm6q7K739DNl9zF6V+cQlJeRQS1eYTZ0=
+  file: VoicePackWithRobojumperScript.zip
+  skip_cleanup: true
+  draft: true
+  on:
+    repo: stupidpupil/voicepack_template
+    tags: true
