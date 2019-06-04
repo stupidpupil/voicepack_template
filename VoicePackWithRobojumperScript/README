@@ -1,0 +1,11 @@
+You need to install this zip file as a ModBuddy template. 
+
+Copy the zip file to:
+...\SteamApps\common\XCOM 2 SDK\Binaries\Win32\ModBuddy\Extensions\Application\ProjectTemplates\XCOM2Mod\1033\
+
+#########################################################
+
+You *cannot* just download this and edit the files. 
+You *must* install and use it as a ModBuddy template!
+
+See https://github.com/stupidpupil/voicepack_template#Using for more details.
