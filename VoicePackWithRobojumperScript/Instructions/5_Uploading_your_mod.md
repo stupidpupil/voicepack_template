@@ -6,6 +6,7 @@ also by Robojumper, is easier to use than the one built into ModBuddy.
 These instructions below are highly opinionated and reflect my personal preferences! 
 You can ignore them if you like.
 
+
 ## Name of the mod
 
 I suggest that you call your voice pack something like 
@@ -22,6 +23,7 @@ people have WOTC and most voice packs are compatible with both vanilla and WOTC
 You should point out it adds a voice somewhere in the title, but adding 'pack' is pointless,
 and again it doesn't need to be at the front.
 
+
 ## Description
 I think the following information is useful:
  * How many unique lines does the voice pack include? (Doesn't need to be precise. '100+', for example.)
@@ -29,13 +31,14 @@ I think the following information is useful:
  * Is the voice enabled for WOTC faction characters, Sparks etc.?
  * Is the voice XCOM-lore-friendly? (Does it mention characters or concepts from elsewhere?)
 
-I also think it's polite to give a little info about where the lines came from, and who the voice actor was.
+I also think it's polite to give credit regarding where the lines came from, and who the voice actor was.
 
 I would be grateful if you could provide a link to this voice pack template. For example:
 ```
 This voice pack was created using [url=https://github.com/stupidpupil/voicepack_template]StupidPupil's template for Robojumper's script[/url].
 ```
 but it's obviously your choice!
+
 
 ## Images and videos
 
@@ -47,6 +50,7 @@ Preview videos are helpful, particularly if they show some actual gameplay
 (and not just you hitting the *PREVIEW* button in the customisation screen).
 
 [Shotcut](https://shotcut.org) is a fairly easy-to-use video editor.
+
 
 ## Tagging
 Use the *Voice* tag and *War Of The Chosen* tags. (The first so that people can

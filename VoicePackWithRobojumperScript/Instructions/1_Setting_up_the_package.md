@@ -8,6 +8,7 @@ If you're quite familiar with XCOM 2 modding (or just modding Unreal Engine game
 you can find most of the important information in these instructions in the 
 `Content\NamingInfo.txt` file.
 
+
 ## Open the Unreal Editor
 
 In XCOM ModBuddy.
@@ -17,7 +18,9 @@ In XCOM ModBuddy.
 
 This will open up the Unreal Editor for XCOM2
 
+
 ## Create new UPK package
+
 1. In the Content Browser window, press the "New" button
 2. Set the Package name to "$ModSafeName$Pkg"
 3. Set the Factory to "SoundCue"
@@ -25,7 +28,9 @@ This will open up the Unreal Editor for XCOM2
 
 You MUST name the package "$ModSafeName$Pkg".
 
+
 ## Add a reference to the Robojumper Voice Character script
+
 1. Close the Unreal SoundCue Editor window
 2. In the Content Browser window select the Actor Classes tab
 3. Uncheck 
@@ -40,7 +45,9 @@ You MUST name the package "$ModSafeName$Pkg".
 
 You MUST name this object "_$ModSafeName$VoiceArchetype".
 
+
 ## Save the package
+
 1. Go back to the "Content Browser" tab
 2. Right-click on SoundCue_0 and choose Delete
 3. Press Ctrl-S
@@ -52,7 +59,9 @@ You MUST name this object "_$ModSafeName$VoiceArchetype".
 `%USERPROFILE%\Documents\Firaxis ModBuddy\XCOM\$ModSafeName$\$ModSafeName$\Content\$ModSafeName$Pkg.upk` 
 - this might not be quite right depending on what you've named stuff when you first created the mod.)
 
+
 ## Add the package to your mod project
+
 1. Close the Content Browser and Unreal Editor windows
 2. Return to XCOM ModBuddy
 3. In the Solution Explorer pane on the left, right-click the Content folder and choose Add > Existing Item ...

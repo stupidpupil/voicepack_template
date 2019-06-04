@@ -5,19 +5,26 @@ This the bark played when previewing a voice in the character customisation scre
 
 You may want to review the "Notes on sound files" section before proceeding.
 
+
 ## Reopen the package
+
 1. Menus > TOOLS > XCOM 2 Editor
 2. In the Content Browser window, press the  button with an open folder icon
 3. Navigate to and open the "$ModSafeName$Pkg.upk" file
 
+
 ## Importing a sound file
+
 1. In the Content Browser window, press the "Import" button
 2. Open your first sound file (e.g. "$ModSafeName$_Dashing_01.wav")
 3. Leave the default options and click "OK"
 
+
 ## Creating a sound cue
+
 1. Right-click in the background of the package contents pane and choose "New SoundCue"
 2. Set the name to "$ModSafeName$_Dashing_Cue" 
+
 
 You don't have to use this naming convention for SoundNodeWaves and SoundCues, but I strongly suggest you do so. 
 This keeps SoundNodeWaves and their SoundCues grouped together helpfully when sorting the package contents by name.
@@ -32,7 +39,9 @@ You can select multiple SoundNodeWaves at Step 3, and the Random node will pick 
 
 7. In the package contents pane, right-click on the $ModSafeName$_Dashing_Cue object and choose "Sound Classes [...]" > "Voice"
 
+
 ## Hook the cue up to the Voice
+
 1. In the package contents pane, right-click on the Archetype object (_$ModSafeName$VoiceArchetype) and choose Properties
 2. Expand the 'Robojumper Character Voice [...]' panel
 3. Expand the 'Events' list
@@ -42,12 +51,15 @@ You can select multiple SoundNodeWaves at Step 3, and the Random node will pick 
 7. In the Archetype properties window, click the green arrow, next to the Cue item under the Dashing event
 8. Close the Archetype properties window
 
+
 ## Save the package
 
 1. Press Ctrl-S
 2. Click "Yes" in the warning Message that appears about references to external packages
 
+
 ## Testing this bark
+
 1. Close the Content Browser and Unreal Editor windows
 2. Return to XCOM ModBuddy
 3. Menus > BUILD > Build Solution
