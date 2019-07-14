@@ -1,7 +1,14 @@
-﻿[$ModSafeName$BodyPartTemplate X2BodyPartTemplate]
+[$ModSafeName$BodyPartTemplate X2BodyPartTemplate]
 DisplayName="$ModSafeName$"
 
-; WotC classes - uncomment the lines below and the relevant line in \Config\XComContent.int
+; WotC classes - uncomment the lines below and the relevant lines in \Config\XComContent.int
+
+;[$ModSafeName$BodyPartTemplate_Reaper X2BodyPartTemplate]
+;DisplayName="$ModSafeName$"
+
+;[$ModSafeName$BodyPartTemplate_Skirmisher X2BodyPartTemplate]
+;DisplayName="$ModSafeName$"
+
 ;[$ModSafeName$BodyPartTemplate_Templar X2BodyPartTemplate]
 ;DisplayName="$ModSafeName$"
 
