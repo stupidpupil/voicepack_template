@@ -27,7 +27,7 @@ ffmpeg -i MyInputFile.mp3 \
 There are several factors that affect how loud the barks actually sound compared to the rest of XCOM 2:
 - The volume of the sound file.
 - The volume multiplier of the SoundNodeWave object created when you import the sound file; this seems to be fixed at 0.75.
-- The volume multiplier of the SoundCue object that plays the SoundNodeWave, which is 0.75 by default by can be changed.
+- The volume multiplier of the SoundCue object that plays the SoundNodeWave, which is 0.75 by default but can be changed.
 - The sound class of the SoundCue object, which is 'Master' by default but should always be set to 'Voice'.
 
 My understanding is the following: The sound files for the built-in barks often have an 
