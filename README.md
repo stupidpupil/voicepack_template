@@ -30,7 +30,7 @@ You ***cannot*** just download this and edit the files. You ***must*** install a
 ([See this video for an example.](https://www.youtube.com/watch?v=5hRLr86eRik&feature=youtu.be))
 
 5. Follow the instructions.  
-([*Preview* these here.](https://github.com/stupidpupil/voicepack_template/tree/master/VoicePackWithRobojumperScript/Instructions) Note that $ModSafeName$ will be replaced with the actual name of your mod.)
+([*Preview* these here.](https://github.com/stupidpupil/voicepack_template/tree/master/VoicePackWithRobojumperScript/Instructions) Note that `$ModSafeName$` will be replaced with the actual name of your mod.)
 
 # LICENSE
 
